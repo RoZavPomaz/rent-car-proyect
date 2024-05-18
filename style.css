@@ -220,6 +220,7 @@ header {
   width: 12rem;
   padding: 1.5rem 0.7rem 1.5rem 1rem;
   border-radius: 0.2rem;
+  cursor: pointer;
 }
 
 .car::after {
