@@ -292,6 +292,7 @@ header {
   .btn-hamburguesa {
     display: none;
   }
+
   .dekstop {
     display: block;
   }
@@ -368,6 +369,7 @@ header {
     width: 100%;
     padding: 1.5rem 0.7rem 1rem 1rem;
   }
+
   .car-imagen img {
     width: 17rem;
     height: 9rem;
@@ -390,10 +392,12 @@ header {
     top: 35%;
     right: 25%;
   }
+
   .top {
     margin-top: 4rem;
   }
 }
+
 img {
   max-width: 100%;
   display: block;
@@ -414,6 +418,19 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 85%;
+  position: relative;
+  display: flex;
+
+  p {
+    top: 20px;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    position: absolute;
+    font-family: fantasy;
+
+  }
 }
 
 .banner-mid::before {
@@ -427,18 +444,9 @@ a {
   opacity: 0.7;
 }
 
-
-
-
-
-
-
 body {
   background-color: #efefef;
 }
-
-
-
 
 .foro-car {
   padding: 1rem;
@@ -449,13 +457,17 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-
+    justify-content: space-between;
+    height: auto;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
 
     h3 {
       text-align: center;
       font-size: 1rem;
       margin-bottom: 0.6rem;
-      font-family: sans-serif;
     }
 
     .img-car-foro {
@@ -466,7 +478,6 @@ body {
     li {
       font-size: 0.6rem;
       line-height: 1rem;
-      font-family: sans-serif;
       list-style: circle;
     }
 
@@ -484,6 +495,10 @@ body {
       top: 15px;
     }
 
+    .cirlee:hover {
+      background-color: #ff0000;
+    }
+
     .cirlee2 {
       width: 5rem;
       background-color: rgb(242, 162, 149);
@@ -493,21 +508,28 @@ body {
       left: 40px;
       top: 90px;
     }
+
+    .cirlee4 {
+      width: 5rem;
+      background-color: rgb(182, 207, 219);
+      height: 5rem;
+      border-radius: 50%;
+      position: absolute;
+      left: 40px;
+      top: 90px;
+    }
+
   }
 }
 
-
-
-
-
-
-
-
-
-
+.contenedor-foro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .contenedor-testimonios {
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
 
   .encabezado {
     padding-left: 1rem;
@@ -537,7 +559,6 @@ body {
 }
 
 .card-testimonio {
-  font-family: gotham;
   font-weight: 400;
   min-width: 9.5rem;
   height: auto;
@@ -553,6 +574,7 @@ body {
     font-size: 0.7rem;
     font-family: sans-serif;
     letter-spacing: 0.5px;
+    padding-bottom: 0.2rem;
   }
 
   p {
@@ -594,6 +616,8 @@ body {
 }
 
 .card-contenido {
+  
+
   h4 {
     margin-bottom: 0.2rem;
   }
@@ -679,4 +703,75 @@ body {
   top: 55px;
   left: 0;
   right: 0;
+}
+
+@media (min-width: 600px) and (max-width: 1600px) {
+  .contenedor-foro {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .card-foro {
+      display: flex;
+      flex-direction: column;
+
+      .cirlee {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      .cirlee2,
+      .cirlee4 {
+        display: none;
+      }
+
+      .text-card-foro {
+        z-index: 11;
+        padding: 1.7rem;
+      }
+    }
+  }
+
+  .testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .card-testimonio {
+      margin-top: 0.9rem;
+      max-width: 350px;
+
+
+      .perfil-card {
+        display: flex;
+        justify-content: start;
+      }
+    }
+  }
+
+  .banner-mid {
+    margin-top: 1.5rem;
+    background-image: url(/img/super-car-banner.webp);
+    height: 12rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 85%;
+  }
+
+  .banner-mid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0.7;
+  }
+
+  .contenido-footer {
+    height: 10rem;
+  }
+
 }
