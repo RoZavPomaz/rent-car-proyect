@@ -1,5 +1,308 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url(./fonts/GothamPro.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GhotamB";
+  src: url(./fonts/GothamPro-Bold.woff);
+  font-style: normal;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner-mid {
+  background-image: url(/img/super-car-banner.webp);
+  height: 6rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 85%;
+}
+
+.banner-mid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+body {
+  background-color: #efefef;
+}
+
+
+
+
+.foro-car {
+  padding: 1rem;
+
+  .card-foro {
+    background-color: #ffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+
+    h3 {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      font-family: sans-serif;
+    }
+
+    .img-car-foro {
+      max-height: 9rem;
+      z-index: 10;
+    }
+
+    li {
+      font-size: 0.6rem;
+      line-height: 1rem;
+      font-family: sans-serif;
+      list-style: circle;
+    }
+
+    .text-card-foro {
+      padding: 0.6rem;
+    }
+
+    .cirlee {
+      width: 5rem;
+      background-color: rgb(219, 220, 220);
+      height: 5rem;
+      border-radius: 50%;
+      position: absolute;
+      left: 70px;
+      top: 15px;
+    }
+
+    .cirlee2 {
+      width: 5rem;
+      background-color: rgb(242, 162, 149);
+      height: 5rem;
+      border-radius: 50%;
+      position: absolute;
+      left: 40px;
+      top: 90px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.contenedor-testimonios {
+  padding: 1rem;
+
+  .encabezado {
+    padding-left: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(1, 1, 37);
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+  }
+}
+
+.testimonios {
+  /* padding: 1.5rem 1rem 1rem 1rem; */
+  padding-top: 1.5rem;
+  padding-bottom: 0.7rem;
+  display: flex;
+  gap: 0.8rem;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.perfil-card {
+  margin-top: 0.5rem;
+}
+
+.card-testimonio {
+  font-family: gotham;
+  font-weight: 400;
+  min-width: 9.5rem;
+  height: auto;
+  padding: 1rem;
+  font-size: 0.6rem;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 2px rgb(222, 221, 221);
+  border-radius: 20px;
+
+  h4 {
+    font-weight: 800;
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    line-height: 0.6rem;
+
+  }
+}
+
+.star-red {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: -23px;
+}
+
+.perfil-card {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.img-perfil {
+  border-radius: 50%;
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+
+.estrellas {
+  margin-top: 0.2rem;
+  display: flex;
+}
+
+.estrellas img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.card-contenido {
+  h4 {
+    margin-bottom: 0.2rem;
+  }
+}
+
+.info-card {
+  h5 {
+    font-size: 0.5rem;
+    font-style: italic;
+  }
+}
+
+.contenedor-footer {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/blur-fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
+  position: relative;
+}
+
+.contenedor-footer::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contenido-footer {
+  padding: 0.1rem 1.5rem 2rem 1.5rem;
+  justify-content: space-between;
+  align-items: end;
+  display: flex;
+  color: #fff;
+  position: relative;
+  font-size: 0.5rem;
+
+  .logo-modi {
+    width: 8rem;
+    filter: contrast(0%);
+  }
+
+
+}
+
+.contenido-footer a {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.contenido-footer li {
+  filter: brightness(70%);
+
+}
+
+.icons-redes {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  filter: brightness(60%);
+
+}
+
+.footer-nav-contacto {
+  position: relative;
+}
+
+.footer-nav-page,
+.footer-nav-legal {
+  line-height: 0.8rem;
+}
+
+.linea-divider {
+  filter: brightness(60%);
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
 }
