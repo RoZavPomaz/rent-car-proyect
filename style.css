@@ -395,18 +395,6 @@ header {
     margin-top: 4rem;
   }
 }
-img {
-  max-width: 100%;
-  display: block;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
 
 .banner-mid {
   background-image: url(/img/super-car-banner.webp);
@@ -415,10 +403,11 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 85%;
+  position: relative;
 }
 
 .banner-mid::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -428,18 +417,9 @@ a {
   opacity: 0.7;
 }
 
-
-
-
-
-
-
 body {
   background-color: #efefef;
 }
-
-
-
 
 .foro-car {
   padding: 1rem;
@@ -450,7 +430,6 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-
 
     h3 {
       text-align: center;
@@ -497,22 +476,14 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 .contenedor-testimonios {
   padding: 1rem;
 
   .encabezado {
     padding-left: 1rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
     font-size: 1.2rem;
     color: rgb(1, 1, 37);
     font-weight: 800;
@@ -558,7 +529,6 @@ body {
 
   p {
     line-height: 0.6rem;
-
   }
 }
 
@@ -582,7 +552,6 @@ body {
   height: 40px;
   object-fit: cover;
 }
-
 
 .estrellas {
   margin-top: 0.2rem;
@@ -638,8 +607,6 @@ body {
     width: 8rem;
     filter: contrast(0%);
   }
-
-
 }
 
 .contenido-footer a {
@@ -650,7 +617,6 @@ body {
 
 .contenido-footer li {
   filter: brightness(70%);
-
 }
 
 .icons-redes {
@@ -662,7 +628,6 @@ body {
   left: 0;
   right: 0;
   filter: brightness(60%);
-
 }
 
 .footer-nav-contacto {
